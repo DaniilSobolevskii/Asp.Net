@@ -1,0 +1,30 @@
+﻿@using Task = ToDoList.Models.Task
+@{
+    ViewData["Title"] = "ToDo-List";
+
+}
+<form>
+    <h4 class="mb-3 text-muted">Создание задачи</h4>
+    <div class="mb-3">
+        <label class="form-label"> Название задачи</label>
+        <input  name="name" type="text" class="form-control"/>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label"> Описание</label>
+        <textarea name="description" type="text" class="form-control" rows="3"></textarea>
+    </div>
+    <button id="createTask" class="btn btn-primary" asp-action="Insert">Ok</button>
+    
+    <div>
+        <h4> Все задачи</h4>
+        @for (var i = 0; i < Task.Tasks.Count; i++)
+        {
+            <div>
+                @Task.Tasks[i].Name;
+            </div>
+        }
+        sldm.amdlssw
+    </div>
+
+</form>

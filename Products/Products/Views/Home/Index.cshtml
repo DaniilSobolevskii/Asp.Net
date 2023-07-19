@@ -1,0 +1,16 @@
+﻿@model Product;
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <form action="@Url.Action("AnotherIndex")" method="Post">
+        Name<br/>
+        <input type="text" name="name" value="@Model.Name"/><br/>
+        Description<br/>
+        <input type ="text" name="description" value="@Model.Dexcription"/><br/> 
+         <input type ="radio" name = "gender" value="male" checked="@(Model.Gender == "male")"> Male<br/>
+        <input type ="radio" name = "gender" value="female" checked="@(Model.Gender == "female")"> Female<br/>
+        <input type="submit"/>
+    </form>
+</div>
